@@ -1,0 +1,678 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #777;
+}
+
+.subscribe-link {
+  text-decoration: none;
+  background-color: #222;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-link:hover {
+  background-color: #444;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+  min-height: 520px;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("/image.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+}
+
+.banner-overlay {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner-small-text {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.banner-content h1 {
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+.banner-content > p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.banner-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  color: #222;
+  padding: 13px 28px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 30px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: #666;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  background-color: white;
+}
+
+.about-content {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-text h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+.articles {
+  background-color: #f5f5f5;
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.article-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.article-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.article-content {
+  padding: 22px;
+}
+
+.article-content h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.article-content p {
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.article-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.article-content button,
+.tutorial-content button {
+  border: none;
+  background-color: #222;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.article-content button:hover,
+.tutorial-content button:hover {
+  background-color: #444;
+}
+
+/* =========================
+   TUTORIALS
+========================= */
+
+.tutorials {
+  background-color: white;
+}
+
+.tutorial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tutorial-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.tutorial-content {
+  padding: 22px;
+}
+
+.tutorial-content h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.tutorial-content p {
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.tutorial-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+/* =========================
+   SEE ALL
+========================= */
+
+.see-all {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.see-all button {
+  padding: 12px 25px;
+  border: 1px solid #222;
+  background-color: white;
+  color: #222;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.see-all button:hover {
+  background-color: #222;
+  color: white;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  background-color: #f5f5f5;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   NEWSLETTER SIGN-UP STRIP
+========================= */
+
+.newsletter {
+  background-color: #e5e5e5;
+  padding: 14px 5%;
+}
+
+.newsletter-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.newsletter h2 {
+  font-size: 23px;
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 800;
+}
+
+.newsletter form {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.newsletter input {
+  width: min(350px, 100%);
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #555;
+  border-radius: 0;
+  background: #fff;
+  font-size: 15px;
+}
+
+.newsletter button {
+  padding: 10px 22px;
+  border: none;
+  background-color: #aaa;
+  color: #222;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #c7c7c7;
+}
+
+.newsletter .subscription-message {
+  margin: 8px 0 0;
+  font-size: 13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  background-color: white;
+  text-align: center;
+}
+
+.contact-details {
+  margin-top: 20px;
+}
+
+.contact-details p {
+  margin: 10px 0;
+}
+
+/* =========================
+   FOOTER — aligned with the P3 reference wireframe
+========================= */
+
+.footer {
+  background-color: #079b9b;
+  color: #102b2b;
+  padding: 34px 5% 24px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-column h2 {
+  font-size: 25px;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.footer-column a {
+  color: #102b2b;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column a:hover,
+.footer-legal a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background: #f4f4f4;
+  color: #17616a;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 42px auto 0;
+  text-align: center;
+}
+
+.footer-bottom h2 {
+  margin: 0 0 14px;
+  font-size: 24px;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 44px;
+}
+
+.footer-legal a {
+  color: #102b2b;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+  .navbar {
+    padding: 18px 30px;
+  }
+
+  .navbar-links {
+    gap: 15px;
+  }
+
+  .article-container,
+  .tutorial-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .subscribe-link {
+    display: none;
+  }
+
+  .banner {
+    min-height: 450px;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .banner-content > p {
+    font-size: 17px;
+  }
+
+  .article-container,
+  .tutorial-container {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter input {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .section-container {
+    padding: 50px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .banner-content h1 {
+    font-size: 34px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-container img {
+    height: 220px;
+  }
+}
+
+.subscription-message {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-social {
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+  }
+
+  .footer-legal {
+    gap: 16px 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .newsletter-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .newsletter form {
+    width: 100%;
+  }
+
+  .newsletter input {
+    flex: 1;
+  }
+}
